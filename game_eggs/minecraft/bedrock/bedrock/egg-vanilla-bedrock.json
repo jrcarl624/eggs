@@ -7,24 +7,24 @@
     "exported_at": "2022-01-22T05:42:40-05:00",
     "name": "Vanilla Bedrock",
     "author": "parker@parkervcp.com",
-    "description": "Bedrock Edition (also known as the Bedrock Version, Bedrock Codebase, Bedrock Engine or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang AB, Microsoft Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket\/Windows 10 Edition\".",
+    "description": "Bedrock Edition (also known as the Bedrock Version, Bedrock Codebase, Bedrock Engine or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang AB, Microsoft Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket/Windows 10 Edition\".",
     "features": [
         "pid_limit"
     ],
     "images": [
-        "ghcr.io\/parkervcp\/yolks:debian"
+        "ghcr.io/parkervcp/yolks:debian"
     ],
     "file_denylist": [],
-    "startup": ".\/bedrock_server",
+    "startup": "./bedrock_server",
     "config": {
-        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-port\": \"{{server.build.default.port}}\",\r\n            \"server-name\": \"{{server.build.env.SERVERNAME}}\",\r\n            \"gamemode\": \"{{server.build.env.GAMEMODE}}\",\r\n            \"difficulty\": \"{{server.build.env.DIFFICULTY}}\",\r\n            \"allow-cheats\": \"{{server.build.env.CHEATS}}\"\r\n        }\r\n    }\r\n}",
+        "files": "{\"server.properties\":{\"parser\":\"properties\",\"find\":{\"server-port\":\"{{server.build.default.port}}\",\"server-name\":\"{{server.build.env.SERVER_NAME}}\",\"gamemode\":\"{{server.build.env.GAMEMODE}}\",\"difficulty\":\"{{server.build.env.DIFFICULTY}}\",\"allow-cheats\":\"{{server.build.env.ALLOW_CHEATS}}\",\"allow-inbound-script-debugging\":\"{{server.build.env.ALLOW_INBOUND_SCRIPT_DEBUGGING}}\",\"allow-list\":\"{{server.build.env.ALLOW_LIST}}\",\"allow-outbound-script-debugging\":\"{{server.build.env.ALLOW_OUTBOUND_SCRIPT_DEBUGGING}}\",\"chat-restriction\":\"{{server.build.env.CHAT_RESTRICTION}}\",\"clacks-endpoint\":\"{{server.build.env.CLACKS_ENDPOINT}}\",\"client-side-chunk-generation-enabled\":\"{{server.build.env.CLIENT_SIDE_CHUNK_GENERATION_ENABLED}}\",\"compression-algorithm\":\"{{server.build.env.COMPRESSION_ALGORITHM}}\",\"compression-threshold\":\"{{server.build.env.COMPRESSION_THRESHOLD}}\",\"content-log-file-enabled\":\"{{server.build.env.CONTENT_LOG_FILE_ENABLED}}\",\"correct-player-movement\":\"{{server.build.env.CORRECT_PLAYER_MOVEMENT}}\",\"default-player-permission-level\":\"{{server.build.env.DEFAULT_PLAYER_PERMISSION_LEVEL}}\",\"disable-custom-skins\":\"{{server.build.env.DISABLE_CUSTOM_SKINS}}\",\"disable-persona\":\"{{server.build.env.DISABLE_PERSONA}}\",\"disable-player-interaction\":\"{{server.build.env.DISABLE_PLAYER_INTERACTION}}\",\"emit-server-telemetry\":\"{{server.build.env.EMIT_SERVER_TELEMETRY}}\",\"enable-item-stack-net-manager-deprecated\":\"{{server.build.env.ENABLE_ITEM_STACK_NET_MANAGER_DEPRECATED}}\",\"enable-lan-visibility\":\"{{server.build.env.ENABLE_LAN_VISIBILITY}}\",\"enable-script\":\"{{server.build.env.ENABLE_SCRIPT}}\",\"force-gamemode\":\"{{server.build.env.FORCE_GAMEMODE}}\",\"item-transaction-logging-enabled\":\"{{server.build.env.ITEM_TRANSACTION_LOGGING_ENABLED}}\",\"language\":\"{{server.build.env.LANGUAGE}}\",\"level-name\":\"{{server.build.env.LEVEL_NAME}}\",\"level-seed\":\"{{server.build.env.LEVEL_SEED}}\",\"level-type\":\"{{server.build.env.LEVEL_TYPE}}\",\"max-players\":\"{{server.build.env.MAX_PLAYERS}}\",\"max-threads\":\"{{server.build.env.MAX_THREADS}}\",\"msa-gamertags-only\":\"{{server.build.env.MSA_GAMERTAGS_ONLY}}\",\"online-mode\":\"{{server.build.env.ONLINE_MODE}}\",\"op-permission-level\":\"{{server.build.env.OP_PERMISSION_LEVEL}}\",\"player-idle-timeout\":\"{{server.build.env.PLAYER_IDLE_TIMEOUT}}\",\"player-movement-action-direction-threshold\":\"{{server.build.env.PLAYER_MOVEMENT_ACTION_DIRECTION_THRESHOLD}}\",\"player-movement-distance-threshold\":\"{{server.build.env.PLAYER_MOVEMENT_DISTANCE_THRESHOLD}}\",\"player-movement-duration-threshold-in-ms\":\"{{server.build.env.PLAYER_MOVEMENT_DURATION_THRESHOLD_IN_MS}}\",\"player-movement-score-threshold\":\"{{server.build.env.PLAYER_MOVEMENT_SCORE_THRESHOLD}}\",\"player-rewind-history-size-ticks\":\"{{server.build.env.PLAYER_REWIND_HISTORY_SIZE_TICKS}}\",\"player-rewind-min-correction-delay-ticks\":\"{{server.build.env.PLAYER_REWIND_MIN_CORRECTION_DELAY_TICKS}}\",\"player-rewind-position-acceptance\":\"{{server.build.env.PLAYER_REWIND_POSITION_ACCEPTANCE}}\",\"player-rewind-position-persuasion\":\"{{server.build.env.PLAYER_REWIND_POSITION_PERSUASION}}\",\"player-rewind-position-threshold\":\"{{server.build.env.PLAYER_REWIND_POSITION_THRESHOLD}}\",\"player-rewind-velocity-threshold\":\"{{server.build.env.PLAYER_REWIND_VELOCITY_THRESHOLD}}\",\"player-tick-policy\":\"{{server.build.env.PLAYER_TICK_POLICY}}\",\"player-tick-throttled-input-batch-size\":\"{{server.build.env.PLAYER_TICK_THROTTLED_INPUT_BATCH_SIZE}}\",\"player-tick-throttled-max-tick-credits\":\"{{server.build.env.PLAYER_TICK_THROTTLED_MAX_TICK_CREDITS}}\",\"remote-server-communication-endpoint\":\"{{server.build.env.REMOTE_SERVER_COMMUNICATION_ENDPOINT}}\",\"script-watchdog-enable\":\"{{server.build.env.SCRIPT_WATCHDOG_ENABLE}}\",\"script-watchdog-enable-exception-handling\":\"{{server.build.env.SCRIPT_WATCHDOG_ENABLE_EXCEPTION_HANDLING}}\",\"script-watchdog-enable-shutdown\":\"{{server.build.env.SCRIPT_WATCHDOG_ENABLE_SHUTDOWN}}\",\"script-watchdog-hang-exception\":\"{{server.build.env.SCRIPT_WATCHDOG_HANG_EXCEPTION}}\",\"script-watchdog-hang-threshold\":\"{{server.build.env.SCRIPT_WATCHDOG_HANG_THRESHOLD}}\",\"script-watchdog-memory-limit\":\"{{server.build.env.SCRIPT_WATCHDOG_MEMORY_LIMIT}}\",\"script-watchdog-memory-warning\":\"{{server.build.env.SCRIPT_WATCHDOG_MEMORY_WARNING}}\",\"script-watchdog-slow-threshold\":\"{{server.build.env.SCRIPT_WATCHDOG_SLOW_THRESHOLD}}\",\"script-watchdog-spike-threshold\":\"{{server.build.env.SCRIPT_WATCHDOG_SPIKE_THRESHOLD}}\",\"server-authoritative-block-breaking\":\"{{server.build.env.SERVER_AUTHORITATIVE_BLOCK_BREAKING}}\",\"server-authoritative-block-breaking-pick-range-scalar\":\"{{server.build.env.SERVER_AUTHORITATIVE_BLOCK_BREAKING_PICK_RANGE_SCALAR}}\",\"server-authoritative-movement\":\"{{server.build.env.SERVER_AUTHORITATIVE_MOVEMENT}}\",\"server-id\":\"{{server.build.env.SERVER_ID}}\",\"server-wakeup-frequency\":\"{{server.build.env.SERVER_WAKEUP_FREQUENCY}}\",\"texturepack-required\":\"{{server.build.env.TEXTUREPACK_REQUIRED}}\",\"tick-distance\":\"{{server.build.env.TICK_DISTANCE}}\",\"trusted-key\":\"{{server.build.env.TRUSTED_KEY}}\",\"view-distance\":\"{{server.build.env.VIEW_DISTANCE}}\",\"white-list\":\"{{server.build.env.WHITE_LIST}}\",\"wserver-retry-time\":\"{{server.build.env.WSERVER_RETRY_TIME}}\",\"wsserver-encryption\":\"{{server.build.env.WSSERVER_ENCRYPTION}}\"}}}",
         "startup": "{\r\n    \"done\": \"Server started\"\r\n}",
         "logs": "{}",
         "stop": "stop"
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y zip unzip wget curl\r\n\r\nif [ ! -d \/mnt\/server\/ ]; then\r\n    mkdir \/mnt\/server\/\r\nfi\r\n\r\ncd \/mnt\/server\r\n\r\n# Minecraft CDN Akamai blocks script user-agents\r\nRANDVERSION=$(echo $((1 + $RANDOM % 4000)))\r\n\r\nif [ -z \"${BEDROCK_VERSION}\" ] || [ \"${BEDROCK_VERSION}\" == \"latest\" ]; then\r\n    echo -e \"\\n Downloading latest Bedrock server\"\r\n    curl -L -A \"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/90.0.$RANDVERSION.212 Safari\/537.36\" -H \"Accept-Language: en\" -H \"Accept-Encoding: gzip, deflate\" -o versions.html.gz https:\/\/www.minecraft.net\/en-us\/download\/server\/bedrock\r\n    DOWNLOAD_URL=$(zgrep -o 'https:\/\/minecraft.azureedge.net\/bin-linux\/[^\"]*' versions.html.gz)\r\nelse \r\n    echo -e \"\\n Downloading ${BEDROCK_VERSION} Bedrock server\"\r\n    DOWNLOAD_URL=https:\/\/minecraft.azureedge.net\/bin-linux\/bedrock-server-$BEDROCK_VERSION.zip\r\nfi\r\n\r\nDOWNLOAD_FILE=$(echo ${DOWNLOAD_URL} | cut -d\"\/\" -f5) # Retrieve archive name\r\n\r\necho -e \"backing up config files\"\r\nrm *.bak versions.html.gz\r\ncp server.properties server.properties.bak\r\ncp permissions.json permissions.json.bak\r\ncp whitelist.json whitelist.json.bak\r\n\r\necho -e \"Downloading files from: $DOWNLOAD_URL\"\r\n\r\ncurl -L -A \"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/90.0.$RANDVERSION.212 Safari\/537.36\" -H \"Accept-Language: en\" -o $DOWNLOAD_FILE $DOWNLOAD_URL\r\n\r\necho -e \"Unpacking server files\"\r\nunzip -o $DOWNLOAD_FILE\r\n\r\necho -e \"Cleaning up after installing\"\r\nrm $DOWNLOAD_FILE\r\n\r\necho -e \"restoring backup config files - on first install there will be file not found errors which you can ignore.\"\r\ncp -rf server.properties.bak server.properties\r\ncp -rf permissions.json.bak permissions.json\r\ncp -rf whitelist.json.bak whitelist.json\r\n\r\nchmod +x bedrock_server\r\n\r\necho -e \"Install Completed\"",
+            "script": "#!/bin/bash\r\n\r\napt update\r\napt install -y zip unzip wget curl\r\n\r\nif [ ! -d /mnt/server/ ]; then\r\n    mkdir /mnt/server/\r\nfi\r\n\r\ncd /mnt/server\r\n\r\n# Minecraft CDN Akamai blocks script user-agents\r\nRANDVERSION=$(echo $((1 + $RANDOM % 4000)))\r\n\r\nif [ -z \"${BEDROCK_VERSION}\" ] || [ \"${BEDROCK_VERSION}\" == \"latest\" ]; then\r\n    echo -e \"\\n Downloading latest Bedrock server\"\r\n    curl -L -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.$RANDVERSION.212 Safari/537.36\" -H \"Accept-Language: en\" -H \"Accept-Encoding: gzip, deflate\" -o versions.html.gz https://www.minecraft.net/en-us/download/server/bedrock\r\n    DOWNLOAD_URL=$(zgrep -o 'https://minecraft.azureedge.net/bin-linux/[^\"]*' versions.html.gz)\r\nelse \r\n    echo -e \"\\n Downloading ${BEDROCK_VERSION} Bedrock server\"\r\n    DOWNLOAD_URL=https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip\r\nfi\r\n\r\nDOWNLOAD_FILE=$(echo ${DOWNLOAD_URL} | cut -d\"/\" -f5) # Retrieve archive name\r\n\r\necho -e \"backing up config files\"\r\nrm *.bak versions.html.gz\r\ncp server.properties server.properties.bak\r\ncp permissions.json permissions.json.bak\r\ncp whitelist.json whitelist.json.bak\r\n\r\necho -e \"Downloading files from: $DOWNLOAD_URL\"\r\n\r\ncurl -L -A \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.$RANDVERSION.212 Safari/537.36\" -H \"Accept-Language: en\" -o $DOWNLOAD_FILE $DOWNLOAD_URL\r\n\r\necho -e \"Unpacking server files\"\r\nunzip -o $DOWNLOAD_FILE\r\n\r\necho -e \"Cleaning up after installing\"\r\nrm $DOWNLOAD_FILE\r\n\r\necho -e \"restoring backup config files - on first install there will be file not found errors which you can ignore.\"\r\ncp -rf server.properties.bak server.properties\r\ncp -rf permissions.json.bak permissions.json\r\ncp -rf whitelist.json.bak whitelist.json\r\n\r\nchmod +x bedrock_server\r\n\r\necho -e \"Install Completed\"",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
@@ -49,40 +49,625 @@
             "rules": "required|string|max:20"
         },
         {
-            "name": "Server Name",
-            "description": "The name for the server",
-            "env_variable": "SERVERNAME",
-            "default_value": "Bedrock Dedicated Server",
+            "name": "Allow Cheats",
+            "description": "",
+            "env_variable": "ALLOW_CHEATS",
+            "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|max:50"
+            "rules": "boolean|in:true,false"
         },
         {
-            "name": "Gamemode",
-            "description": "Allowed values: \"survival\", \"creative\", or \"adventure\"",
-            "env_variable": "GAMEMODE",
-            "default_value": "survival",
+            "name": "Allow Inbound Script Debugging",
+            "description": "",
+            "env_variable": "ALLOW_INBOUND_SCRIPT_DEBUGGING",
+            "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:survival,creative,adventure"
+            "rules": "boolean"
+        },
+        {
+            "name": "Allow List",
+            "description": "If true then all connected players must be listed in the separate allowlist.json file.",
+            "env_variable": "ALLOW_LIST",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Allow Outbound Script Debugging",
+            "description": "",
+            "env_variable": "ALLOW_OUTBOUND_SCRIPT_DEBUGGING",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Chat Restriction",
+            "description": "This represents the level of restriction applied to the chat for each player that joins the server.\n\"None\" is the default and represents regular free chat. \n\"Dropped\" means the chat messages are dropped and never sent to any client. Players receive a message to let them know the feature is disabled. \n \"Disabled\" means that unless the player is an operator, the chat UI does not even appear. No information is displayed to the player.",
+            "env_variable": "CHAT_RESTRICTION",
+            "default_value": "None",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:None,Dropped,Disabled"
+        },
+        {
+            "name": "Clacks Endpoint",
+            "description": "some sort of url / domain port combo",
+            "env_variable": "CLACKS_ENDPOINT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Client Side Chunk Generation Enabled",
+            "description": "If true, the server will inform clients that they have the ability to generate visual level chunks outside of player interaction distances.",
+            "env_variable": "CLIENT_SIDE_CHUNK_GENERATION_ENABLED",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Compression Algorithm",
+            "description": "Determines the compression algorithm to use for networking",
+            "env_variable": "COMPRESSION_ALGORITHM",
+            "default_value": "zlib",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:zlib,snappy"
+        },
+        {
+            "name": "Compression Threshold",
+            "description": "Determines the smallest size of raw network payload to compress. 0-65535",
+            "env_variable": "COMPRESSION_THRESHOLD",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Content Log File Enabled",
+            "description": "Enables logging content errors to a file",
+            "env_variable": "CONTENT_LOG_FILE_ENABLED",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Correct Player Movement",
+            "description": "If true, the client position will get corrected to the server position if the movement score exceeds the threshold.",
+            "env_variable": "CORRECT_PLAYER_MOVEMENT",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Default Player Permission Level",
+            "description": "Permission level for new players joining for the first time.",
+            "env_variable": "DEFAULT_PLAYER_PERMISSION_LEVEL",
+            "default_value": "member",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:visitor,member,operator"
         },
         {
             "name": "Difficulty",
-            "description": "Allowed values: \"peaceful\", \"easy\", \"normal\", or \"hard\"",
+            "description": "Sets the difficulty of the world.",
             "env_variable": "DIFFICULTY",
             "default_value": "easy",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:peaceful,easy,normal,hard"
+            "rules": "string|in:easy,peaceful,normal,hard"
         },
         {
-            "name": "Allow cheats",
-            "description": "If true then cheats like commands can be used.\r\n\r\nAllowed values: \"true\" or \"false\"",
-            "env_variable": "CHEATS",
+            "name": "Disable Custom Skins",
+            "description": "",
+            "env_variable": "DISABLE_CUSTOM_SKINS",
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string|in:true,false"
+            "rules": "boolean"
+        },
+        {
+            "name": "Disable Persona",
+            "description": "",
+            "env_variable": "DISABLE_PERSONA",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Disable Player Interaction",
+            "description": "If true, the server will inform clients that they should ignore other players when interacting with the world. This is not server authoritative.",
+            "env_variable": "DISABLE_PLAYER_INTERACTION",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Emit Server Telemetry",
+            "description": "If true, the server will emit telemetry data to the Mojang telemetry servers. \"Enabling this telemetry helps us improve the game.\", when you start the server.",
+            "env_variable": "EMIT_SERVER_TELEMETRY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Enable Item Stack Net Manager Deprecated",
+            "description": "",
+            "env_variable": "ENABLE_ITEM_STACK_NET_MANAGER_DEPRECATED",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Enable Lan Visibility",
+            "description": "Listen and respond to clients that are looking for servers on the LAN. This will cause the server to bind to the default ports (19132, 19133) even when `server-port` and `server-portv6` have non-default values. Consider turning this off if LAN discovery is not desirable, or when running multiple servers on the same host may lead to port conflicts.",
+            "env_variable": "ENABLE_LAN_VISIBILITY",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Enable Script",
+            "description": "",
+            "env_variable": "ENABLE_SCRIPT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Force Gamemode",
+            "description": "force-gamemode=false (or force-gamemode  is not defined in the server.properties) prevents the server from sending to the client gamemode values other than the gamemode value saved by the server during world creation even if those values are set in server.properties after world creation.\nforce-gamemode=true forces the server to send to the client gamemode values other than the gamemode value saved by the server during world creation if those values are set in server.properties after world creation.",
+            "env_variable": "FORCE_GAMEMODE",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Gamemode",
+            "description": "Sets the game mode for new players.",
+            "env_variable": "GAMEMODE",
+            "default_value": "survival",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:spectator,survival,creative,adventure"
+        },
+        {
+            "name": "Item Transaction Logging Enabled",
+            "description": "",
+            "env_variable": "ITEM_TRANSACTION_LOGGING_ENABLED",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Language",
+            "description": "",
+            "env_variable": "LANGUAGE",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Level Name",
+            "description": "Any string without semicolon symbol or symbols illegal for file name: /\n\r\t\f`?*\\<>|\":",
+            "env_variable": "LEVEL_NAME",
+            "default_value": "Bedrock level",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Level Seed",
+            "description": "Use to randomize the world seed. Any string",
+            "env_variable": "LEVEL_SEED",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Level Type",
+            "description": "",
+            "env_variable": "LEVEL_TYPE",
+            "default_value": "DEFAULT",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:DEFAULT,FLAT,LEGACY"
+        },
+        {
+            "name": "Max Players",
+            "description": "The maximum number of players that can play on the server. Any positive integer",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "20",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Max Threads",
+            "description": "Maximum number of threads the server will try to use. If set to 0 or removed then it will use as many as possible. Any positive integer.",
+            "env_variable": "MAX_THREADS",
+            "default_value": "8",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Msa Gamertags Only",
+            "description": "",
+            "env_variable": "MSA_GAMERTAGS_ONLY",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Online Mode",
+            "description": "If true then all connected players must be authenticated to Xbox Live. Clients connecting to remote (non-LAN) servers will always require Xbox Live authentication regardless of this setting. If the server accepts connections from the Internet, then it's highly recommended to enable online-mode.",
+            "env_variable": "ONLINE_MODE",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Op Permission Level",
+            "description": "",
+            "env_variable": "OP_PERMISSION_LEVEL",
+            "default_value": "2",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Idle Timeout",
+            "description": "After a player has idled for this many minutes they will be kicked. If set to 0 then players can idle indefinitely. Any non-negative integer.",
+            "env_variable": "PLAYER_IDLE_TIMEOUT",
+            "default_value": "30",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Movement Action Direction Threshold",
+            "description": "Type: Float. \nThe amount that the player's attack direction and look direction can differ. Allowed values: Any value in the range of [0, 1] where 1 means that the direction of the players view and the direction the player is attacking must match exactly and a value of 0 means that the two directions can differ by up to and including 90 degrees.",
+            "env_variable": "PLAYER_MOVEMENT_ACTION_DIRECTION_THRESHOLD",
+            "default_value": "0.85",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Movement Distance Threshold",
+            "description": "Type: Float. \nThe difference between server and client positions that needs to be exceeded before abnormal behavior is detected. Disabled by server-authoritative-movement.",
+            "env_variable": "PLAYER_MOVEMENT_DISTANCE_THRESHOLD",
+            "default_value": "0.3",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Movement Duration Threshold In Ms",
+            "description": "The duration of time the server and client positions can be out of sync (as defined by player-movement-distance-threshold) before the abnormal movement score is incremented. This value is defined in milliseconds. Disabled by server-authoritative-movement.",
+            "env_variable": "PLAYER_MOVEMENT_DURATION_THRESHOLD_IN_MS",
+            "default_value": "500",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Movement Score Threshold",
+            "description": "Type: Float. \nThe number of incongruent time intervals needed before abnormal behavior is reported. Disabled by server-authoritative-movement.",
+            "env_variable": "PLAYER_MOVEMENT_SCORE_THRESHOLD",
+            "default_value": "20",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind History Size Ticks",
+            "description": "",
+            "env_variable": "PLAYER_REWIND_HISTORY_SIZE_TICKS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind Min Correction Delay Ticks",
+            "description": "",
+            "env_variable": "PLAYER_REWIND_MIN_CORRECTION_DELAY_TICKS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind Position Acceptance",
+            "description": "Type: Float. \n",
+            "env_variable": "PLAYER_REWIND_POSITION_ACCEPTANCE",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind Position Persuasion",
+            "description": "Type: Float. \n",
+            "env_variable": "PLAYER_REWIND_POSITION_PERSUASION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind Position Threshold",
+            "description": "Type: Float. \n",
+            "env_variable": "PLAYER_REWIND_POSITION_THRESHOLD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Rewind Velocity Threshold",
+            "description": "Type: Float. \n",
+            "env_variable": "PLAYER_REWIND_VELOCITY_THRESHOLD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Tick Policy",
+            "description": "",
+            "env_variable": "PLAYER_TICK_POLICY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:greedy,throttled"
+        },
+        {
+            "name": "Player Tick Throttled Input Batch Size",
+            "description": "",
+            "env_variable": "PLAYER_TICK_THROTTLED_INPUT_BATCH_SIZE",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Player Tick Throttled Max Tick Credits",
+            "description": "",
+            "env_variable": "PLAYER_TICK_THROTTLED_MAX_TICK_CREDITS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Remote Server Communication Endpoint",
+            "description": "some sort of url / domain port combo",
+            "env_variable": "REMOTE_SERVER_COMMUNICATION_ENDPOINT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Script Watchdog Enable",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_ENABLE",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Script Watchdog Enable Exception Handling",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_ENABLE_EXCEPTION_HANDLING",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Script Watchdog Enable Shutdown",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_ENABLE_SHUTDOWN",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Script Watchdog Hang Exception",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_HANG_EXCEPTION",
+            "default_value": "true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
+        },
+        {
+            "name": "Script Watchdog Hang Threshold",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_HANG_THRESHOLD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Script Watchdog Memory Limit",
+            "description": "must be higher than 2000",
+            "env_variable": "SCRIPT_WATCHDOG_MEMORY_LIMIT",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Script Watchdog Memory Warning",
+            "description": "must be higher than 2000",
+            "env_variable": "SCRIPT_WATCHDOG_MEMORY_WARNING",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Script Watchdog Slow Threshold",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_SLOW_THRESHOLD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Script Watchdog Spike Threshold",
+            "description": "",
+            "env_variable": "SCRIPT_WATCHDOG_SPIKE_THRESHOLD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Server Authoritative Block Breaking",
+            "description": "If true, the server will compute block mining operations in sync with the client so it can verify that the client should be able to break blocks when it thinks it can.",
+            "env_variable": "SERVER_AUTHORITATIVE_BLOCK_BREAKING",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Server Authoritative Block Breaking Pick Range Scalar",
+            "description": "Type: Float. \n",
+            "env_variable": "SERVER_AUTHORITATIVE_BLOCK_BREAKING_PICK_RANGE_SCALAR",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Server Authoritative Movement",
+            "description": "Enables server authoritative movement. If \"server-auth\", the server will replay local user input on the server and send down corrections when the client's position doesn't match the server's. If server-auth-with-rewind\" is enabled and the server sends a correction, the clients will be instructed to rewind time back to the correction time, apply the correction, then replay all the player's inputs since then. This results in smoother and more frequent corrections. Corrections will only happen if correct-player-movement is set to true.",
+            "env_variable": "SERVER_AUTHORITATIVE_MOVEMENT",
+            "default_value": "server-auth",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string|in:server-auth,client-auth,server-auth-with-rewind"
+        },
+        {
+            "name": "Server Id",
+            "description": "",
+            "env_variable": "SERVER_ID",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Server Name",
+            "description": "Used as the server name\nAny string without semicolon symbol.",
+            "env_variable": "SERVER_NAME",
+            "default_value": "Dedicated Server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "Server Wakeup Frequency",
+            "description": "",
+            "env_variable": "SERVER_WAKEUP_FREQUENCY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Texturepack Required",
+            "description": "Force clients to use texture packs in the current world",
+            "env_variable": "TEXTUREPACK_REQUIRED",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Tick Distance",
+            "description": "The world will be ticked this many chunks away from any player. Integers in the range [4, 12] inclusive",
+            "env_variable": "TICK_DISTANCE",
+            "default_value": "4",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Trusted Key",
+            "description": "",
+            "env_variable": "TRUSTED_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "string"
+        },
+        {
+            "name": "View Distance",
+            "description": "The maximum allowed view distance in number of chunks. Positive integer equal to 5 or greater.",
+            "env_variable": "VIEW_DISTANCE",
+            "default_value": "32",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "White List",
+            "description": "",
+            "env_variable": "WHITE_LIST",
+            "default_value": "false",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean|in:true,false"
+        },
+        {
+            "name": "Wserver Retry Time",
+            "description": "Type: Float. \n",
+            "env_variable": "WSERVER_RETRY_TIME",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "numeric"
+        },
+        {
+            "name": "Wsserver Encryption",
+            "description": "",
+            "env_variable": "WSSERVER_ENCRYPTION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "boolean"
         }
     ]
 }
